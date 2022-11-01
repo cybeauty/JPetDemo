@@ -20,16 +20,16 @@ cd JPetDemo
 git init
 git add .    //  直接这么写就可以
 git commit -m "first commit"    //   first commit是一个提交信息，可以自定义，用于说明提交内容、变更、作用
-git push -u origin master       //   第一次推送使用，可能会报错：
-                                //   fatal: 'master' does not appear to be a git repository
+git push -u origin main       //   第一次推送使用，可能会报错：
+                                //   fatal: 'main' does not appear to be a git repository
                                 //   fatal: Could not read from remote repository.
                                 //   此时查看信息git remote [-v]没有显示
                                 //   输入git remote add origin https://github.com/tomorrowwwwww/JPetDemo.git，再试即可
 
 
 4.从远程仓库中获取新内容
-git fetch origin master      //获取更新内容，不会自动合并(推荐使用)
-git pull origin master      // 获取更细内容并合并(git fetch+git merge)
+git fetch origin main      //获取更新内容，不会自动合并(推荐使用)
+git pull origin main      // 获取更细内容并合并(git fetch+git merge)
 
 5.从远程仓库查看信息
 git remote [-v]
