@@ -1,0 +1,87 @@
+示范案例：
+https://jpetstore.aspectran.com/catalog/
+
+统一的导航部分代码：
+html:
+<body>
+<!-- 这是网页的头部版心盒子 -->
+<div class="header_con">
+    <!-- h1里面放logo哦 -->
+    <h1>
+        <img src="/images/logo2.jpg" alt="">
+    </h1>
+
+    <!-- 头部右侧表单标签-->
+    <form action="">
+        <input type="text" class="search" value="SEARCH...">
+        <div>
+            <input type="button" class="btn" value="search">
+        </div>
+    </form>
+</div>
+<!-- 导航栏平铺部分：会显示黑色啦 -->
+<div id="nav">
+    <!-- 导航栏版心部分 -->
+    <div class="nav_con">
+        <ul>
+            <li class="margin-left">< a href="#">sign out</ a></li>
+            <li>< a href="#">shopping cart</ a></li>
+            <li>< a href="#">my account</ a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+css:
+.header_icon{
+    width: 1002px;
+    height: 100px;
+    /* background: pink; */
+    /* 左右居中 */
+    margin: 0 auto;
+}
+
+.header_con h1 {
+    width: 604px;
+    height: 66px;
+    /* background: orange; */
+    float: left;
+    padding: 0px 0 0 0px;
+}
+
+.header_con form {
+    width: 227px;
+    height: 61px;
+    /* background: orangered; */
+    float: right;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.header_con .search {
+    width: 195px;
+    height: 26px;
+    background: #f1f1f1;
+    border: 1px solid #e5e5e5;
+    /* 清除右侧边框 */
+    border-right: none;
+    float: left;
+    color: #888888;
+}
+
+.header_con .btn {
+    width: 30px;
+    height: 26px;
+    border: none;
+    background: black url("/images/search.jpg") no-repeat center;
+}
+
+.header_con form div {
+    width: 30px;
+    height: 26px;
+    border: 1px solid #e5e5e5;
+    border-left: none;
+    float: left;
+    /* 给btn套盒子的时候也要加浮动 */
+}

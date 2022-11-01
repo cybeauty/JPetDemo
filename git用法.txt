@@ -1,0 +1,41 @@
+一、安装Git
+https://git-scm.com/download      //官网链接
+
+二、全局设置
+git config --global user.name "your name"      // 设置全局用户名
+git config --global user.email "your email"    // 设置邮箱
+还有一些自定义配置
+git config --global color.ui true        // 让 Git 显示不同的颜色
+git config core.ignorecase true            // 让 Git 对仓库中的文件大小写敏感
+git config -1               //查看已做出的配置
+
+三、基础操作
+1.进入新建项目文件夹，右键Git Bash Here，输入以下代码把github仓库克隆至本地
+git clone 仓库地址          // 我新建了一个仓库，HTTP链接为：https://github.com/tomorrowwwwww/JPetDemo.git
+
+2.新增自己的代码至本地的仓库文件夹下
+
+3.将代码推送至远程仓库，继续Git Bash(以上面的仓库为例)
+cd JPetDemo
+git init
+git add .    //  直接这么写就可以
+git commit -m "first commit"    //   first commit是一个提交信息，可以自定义，用于说明提交内容、变更、作用
+git push -u origin master       //   第一次推送使用，可能会报错：
+                                //   fatal: 'master' does not appear to be a git repository
+                                //   fatal: Could not read from remote repository.
+                                //   此时查看信息git remote [-v]没有显示
+                                //   输入git remote add origin https://github.com/tomorrowwwwww/JPetDemo.git，再试即可
+
+
+4.从远程仓库中获取新内容
+git fetch origin master      //获取更新内容，不会自动合并(推荐使用)
+git pull origin master      // 获取更细内容并合并(git fetch+git merge)
+
+5.从远程仓库查看信息
+git remote [-v]
+
+6.和远程仓库建立关联
+git branch --set-upstream 'local_branch' origin/remote_branch
+
+
+
